@@ -1,87 +1,174 @@
 <!DOCTYPE HTML>
 <html lang="en">
- <head>
-   <style>
-     body {
-       font-family: Arial;
-     }
-   .card {
-     width: 90%;
-     max-width: 470px;
-     background: linear-gradient(135deg, #00feba, #5b548a);
-     color: #fff;
-     margin: 100px auto 0;
-     border-radius: 20px;
-     padding: 40px 35px;
-     text-align: center;
-   }
-     .search {
-       width: 100%;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-     }
-     .search input {
-       border: 0;
-       outline: 0;
-       background: #ebfffc;
-       color: #555;
-       padding: 10px 25px;
-       height: 60px;
-       border-radius: 30px;
-       flex: 1;
-       margin-right: 16px;
-       font-size: 18px;
-     }
-     .search button {
-       border: 0;
-       outline: 0;
-       background: #ebfffc;
-       border-radius: 50%;
-       width: 60px;
-       height: 60px;
-       cursor: pointer;
-     }
-     .search button img {
-       width: 16px;
-       
-     }
-   </style>
-   <title>
-     ULX Weather - The Ultimate Way to view the weather in your location
-   </title>
- </head>
- <body>
-   <div class="card">
-     <div class="search">
-       <input type="text" placeholder="Enter city name">
-       <button>
-         <img src="https://cdn-icons-png.flaticon.com/512/61/61088.png" alt="Search Icon">
-       </button>
-     </div>
-     <div class="weather">
-       <img src="https://www.sciline.org/wp-content/uploads/2021/02/cropped-Torrential-Rain-Flooding-and-Climate-Change.jpg" alt="Rain" class="weather-icon">
-       <h1 class="temperature">
-         22 Degrees Celsius
-       </h1>
-       
-       <h2 class="city">
-         New York
-       </h2>
-       <div class="details">
-         <div class="col">
-           <img src="https://cdn-icons-png.flaticon.com/512/4148/4148460.png" alt="Humidity">
-           <div>
-             <p class="Humidity">
-               50%
-             </p>
-             <p>
-               Humidity
-             </p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </body>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+        ULX Weather Service - Ultra X Weather Service
+        </title>
+        <style>
+            #vid {
+                height: 250px;
+                width: 250px;
+                border: none;
+                border-radius: 12px;
+                
+            }
+            #vid:hover {
+                box-shadow: 0 0 2px 1px rgba(100, 100, 100, 0.8777777777777777777777777777777777777);
+            }
+            #Button {
+                width: 20px;
+                height: 30px;
+                color: rgb(255, 255, 255);
+                background-color: rgba(13, 130, 255, 1);
+                border: none;
+                border-radius: 35%;
+            }
+            body {
+                background-color: rgba(70, 130, 255, 1);
+                font-family: Arial;
+                background: linear-gradient(to right, rgb(25, 90, 105), rgb(113, 161, 166));
+               
+            }
+            p {
+                color: rgb(255, 255, 255);
+            }
+            h1 {
+                color: rgb(255, 255, 255);
+            }
+            h2 {
+                color: rgb(255, 255, 255);
+            }
+            h3 {
+                color: rgb(255, 255, 255);
+            }
+            h4 {
+                color: rgb(255, 255, 255);
+            }
+            #Icon {
+                width: 20px;
+                height: 20px;
+                border: none;
+                border-radius: 1px;
+                justify-content: left;
+            }
+            #Icon:hover {
+                box-shadow: 0 0 2px 1px rgba(100, 100, 100, 0.877);
+            }
+            #SunnyIcon {
+                color: rgba(232, 169, 51, 1);
+                background-color: rgba(255, 255, 255, 0);
+                border: none;
+                border-radius: 1px;
+                justify-content: left;
+                width: 30px;
+                height: 30px;
+                
+            }
+            #SunnyIcon:hover {
+                box-shadow: 0 0 2px 1px rgba(100, 100, 100, 0.877);
+            }
+            #SlightlyCloudlyIcon {
+                color: rgba(165, 179, 199, 1);
+                justify-content: left;
+                border: none;
+                border-radius: 1px;
+                width: 30px;
+                height: 30px;
+            }
+            #SlightlyCloudyIcon:hover {
+                box-shadow: 0 0 2px 1px rgba(100, 100, 100, 0.877);
+            }
+            #CloudyIcon {
+                border: none;
+                border-radius: 12px;
+                color: rgba(128, 125, 128, 1);
+                width: 30px;
+                height: 30px;
+            }
+            #CloudyIcon:hover {
+                box-shadow: 0 0 2px 1px rgba(100, 100, 100, 0.877);
+            }
+            #LocationBanner {
+                background-color: rgba(13, 130, 255);
+            }
+            #Titleofpage {
+                text-align: center;
+                border: none;
+                border-radius: 15%;
+                justify-content: center;
+                font-size: 40px;
+            }
+            #Titleofpage:hover {
+                box-shadow: 0 0 2px 1px rgba(100, 100, 100, 0.877);
+            }
+            #YourUltimateWeatherCompanion {
+                border: none;
+                border-radius: 15%;
+                justify-content: center;
+                text-align: center;
+                background: radial-gradient(circle, rgb(25, 88, 107), rgb(12, 73, 148));
+            }
+            #time {
+                color: rgba(255, 255, 255, 1);
+                font-family: Arial;
+                font-size: 8px;
+                text-align: left;
+                background: linear-gradient(to right, rgb(13, 130, 255), rgba(115, 113, 230));
+                width: 15%;
+            }
+            #DefinitionButton {
+                color: rgb(255, 255, 255);
+                background: linear-gradient(to right, rgb(13, 130, 255), rgba(111, 151, 181, 0.9078));
+                border: rgb(13, 130, 255);
+                border-radius: 12px;
+            
+            }
+            #GetLocation {
+                border: none;
+                border-radius: 12px;
+                font-family: Arial;
+                font-size: 15px;
+                color: rgb(255, 255, 255);
+                background-image: url(https://img.freepik.com/premium-vector/red-geolocation-icon_74669-526.jpg);
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                justify-content: center;
+            }
+            #Header {
+                text-align: center;
+                border: none;
+                background: linear-gradient(to right, rgb(139, 150, 191), rgb(49, 78, 194));
+                font-family: Arial;
+                color: rgb(255, 255, 255);
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <h1 style="background: radial-gradient(circle, rgb(97, 115, 191), rgb(35, 12, 105)" id="Titleofpage">
+            ULX Weather Service
+        </h1>
+        <h2 id="YourUltimateWeatherCompanion">
+        Your Ultimate Weather Companion
+        </h2>
+         <div id="time"></div>
+         <script>
+             function updateTime() {
+  var now = new Date();
+      var time = now.toLocaleTimeString();
+      document.getElementById("time").innerHTML = time;
+             }
+    
+    setInterval(updateTime, 1000);
+             
+         </script>
+      <h3 id="Header">
+          Your local weather
+      </h3>
+      
+        
+    </body>
 </html>
